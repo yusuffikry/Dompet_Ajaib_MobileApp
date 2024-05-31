@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FBF0F0">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temukan Produk Kebutuhan Kamu Disini"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <SearchView
+        android:id="@+id/search_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"/>
+
+    <ProgressBar
+        android:id="@+id/loading_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upsss, Coba periksa jaringan anda"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/noProductTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Produk Tidak Tersedia"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center" />
+
+    <ProgressBar
+        android:id="@+id/loading_more_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/loadmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:text="LOAD MORE"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:backgroundTint="#03A9F4"
+        android:visibility="gone"/> <!-- Set visibility to gone initially -->
+
+</LinearLayout>
